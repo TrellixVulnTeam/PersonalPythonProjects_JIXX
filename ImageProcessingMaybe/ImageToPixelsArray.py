@@ -1,7 +1,7 @@
 from PIL import Image
 import numpy as np
 
-im = Image.open('HubbleDeepField.jpg')
+im = Image.open('testrgb.png')
 
 array = np.zeros([im.height, im.width, 3], dtype=np.uint8)
 
@@ -15,6 +15,7 @@ for x in range(im.width):
             oldPercentDone = percentDone
             print(str(percentDone) + "% done")
 
+print(array)
 
 img = Image.fromarray(array)
 img.save('test1.png')
